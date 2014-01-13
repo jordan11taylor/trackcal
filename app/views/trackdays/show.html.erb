@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Track:</strong>
+  <%= @trackday.track %>
+</p>
+
+<p>
+  <strong>Organization:</strong>
+  <%= @trackday.organization %>
+</p>
+
+<p>
+  <strong>Session type:</strong>
+  <%= @trackday.session_type %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @trackday.price %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @trackday.date %>
+</p>
+
+<%= link_to 'Edit', edit_trackday_path(@trackday) %> |
+<%= link_to 'Back', trackdays_path %>

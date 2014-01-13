@@ -1,0 +1,37 @@
+<%= form_for(@trackday) do |f| %>
+  <% if @trackday.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trackday.errors.count, "error") %> prohibited this trackday from being saved:</h2>
+
+      <ul>
+      <% @trackday.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :track %><br>
+    <%= f.text_field :track %>
+  </div>
+  <div class="field">
+    <%= f.label :organization %><br>
+    <%= f.text_field :organization %>
+  </div>
+  <div class="field">
+    <%= f.label :session_type %><br>
+    <%= f.text_field :session_type %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

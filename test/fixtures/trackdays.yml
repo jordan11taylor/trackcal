@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  track: MyString
+  organization: MyString
+  session_type: MyString
+  price: 1
+  date: 2014-01-12 13:11:18
+
+two:
+  track: MyString
+  organization: MyString
+  session_type: MyString
+  price: 1
+  date: 2014-01-12 13:11:18
