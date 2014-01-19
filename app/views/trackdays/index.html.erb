@@ -1,35 +1,13 @@
-<h1>Listing trackdays</h1>
+<% @trackdays.group_by(&:month).each do |month, trackdays| %>
+  <div class="month">
+    <a name="<%= month %>"></a>
+    <h2 data-magellan-destination="<%= month %>"><%= month %></h2>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Track</th>
-      <th>Organization</th>
-      <th>Session type</th>
-      <th>Price</th>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @trackdays.each do |trackday| %>
-      <tr>
-        <td><%= trackday.track %></td>
-        <td><%= trackday.organization %></td>
-        <td><%= trackday.session_type %></td>
-        <td><%= trackday.price %></td>
-        <td><%= trackday.date %></td>
-        <td><%= link_to 'Show', trackday %></td>
-        <td><%= link_to 'Edit', edit_trackday_path(trackday) %></td>
-        <td><%= link_to 'Destroy', trackday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Trackday', new_trackday_path %>
+  <% trackdays.each do |trackday| %>
+    <h2><%= trackday.track %></h2>
+    <p><%= trackday.organization %></p>
+    <p><%= trackday.session_type %></p>
+    <i><%= trackday.price %></i>
+  <% end %>
+<% end %>

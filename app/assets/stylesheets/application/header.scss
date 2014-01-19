@@ -1,0 +1,21 @@
+@import "compass/css3";
+
+.large-header {
+  @include background-image(image-url("header-bg.png"));
+  background-size: cover;
+  height: 475px;
+  padding: 50px;
+
+  .logo {
+    @include background-image(image-url("logo.png"));
+    background-repeat: no-repeat;
+    height: 32px;
+    margin-bottom: 50px;
+  }
+
+  .headline {
+    @include background-image(image-url("headline.png"));
+    background-repeat: no-repeat;
+    height: 200px;
+  }
+}

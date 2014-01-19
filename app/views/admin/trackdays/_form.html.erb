@@ -1,4 +1,4 @@
-<%= form_for(@trackday) do |f| %>
+<%= form_for [:admin, @trackday] do |f| %>
   <% if @trackday.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@trackday.errors.count, "error") %> prohibited this trackday from being saved:</h2>
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
+    <%= f.date_select :date %>
   </div>
   <div class="actions">
     <%= f.submit %>

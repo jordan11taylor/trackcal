@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140112211118) do
+ActiveRecord::Schema.define(version: 20140117004949) do
 
   create_table "trackdays", force: true do |t|
     t.string   "track"
     t.string   "organization"
     t.string   "session_type"
     t.integer  "price"
-    t.datetime "date"
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

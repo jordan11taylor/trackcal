@@ -14,6 +14,24 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
+
+    <div data-magellan-expedition="fixed" class="filter-bar">
+      <dl class="sub-nav">
+        <dd data-magellan-arrival="January"><a href="#January">Jan</a></dd>
+        <dd data-magellan-arrival="February"><a href="#February">Feb</a></dd>
+        <dd data-magellan-arrival="March"><a href="#March">Mar</a></dd>
+        <dd data-magellan-arrival="April"><a href="#April">Apr</a></dd>
+        <dd data-magellan-arrival="May"><a href="#May">May</a></dd>
+        <dd data-magellan-arrival="June"><a href="#June">Jun</a></dd>
+        <dd data-magellan-arrival="July"><a href="#July">Jul</a></dd>
+        <dd data-magellan-arrival="August"><a href="#August">Aug</a></dd>
+        <dd data-magellan-arrival="September"><a href="#September">Sep</a></dd>
+        <dd data-magellan-arrival="October"><a href="#October">Oct</a></dd>
+        <dd data-magellan-arrival="November"><a href="#November">Nov</a></dd>
+        <dd data-magellan-arrival="December"><a href="#December">Dec</a></dd>
+      </dl>
+    </div>
+
     <main role="main">
        <%= render 'layouts/messages' %>
        <%= yield %>
