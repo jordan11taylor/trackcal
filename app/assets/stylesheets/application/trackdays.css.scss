@@ -1,5 +1,24 @@
 @import "compass/css3";
+@import "base";
 
 .month {
-  background-color: #f2f0f0;
+  background-color: $light-grey;
+  padding: 10px 0 10px 20px;
+  h3 {
+    color: $grey;
+    font-weight: bold;
+  }
 }
+
+.trackday {
+  display: inline-block;
+  background-color: $light-grey;
+  padding: 20px;
+  margin: 20px;
+  border-bottom: 3px solid #8d8d8e;
+  h3 {
+    color: $red;
+    font-weight: bold;
+  }
+}
+

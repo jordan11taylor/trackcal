@@ -5,6 +5,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "Trackcal" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Trackcal" %>">
     <%= stylesheet_link_tag "application" %>
+    <script type="text/javascript" src="//use.typekit.net/jvh8foo.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <%# Foundation 5 won't work with Rails Turbolinks %>
     <%# Modernizr is required for Zurb Foundation %>
     <%= javascript_include_tag "vendor/modernizr" %>

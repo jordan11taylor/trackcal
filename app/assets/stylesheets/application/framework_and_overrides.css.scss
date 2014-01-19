@@ -11,6 +11,10 @@
   width: 100%
 }
 
+p, h1, h2, h3, h4, i {
+  font-family: "ff-meta-web-pro",sans-serif;
+}
+
 // override for the 'Home' navigation link
 .top-bar .name {
   font-size: rem-calc(13);
@@ -51,6 +55,7 @@
 main {
   @include twelve-columns;
   background-color: #fff;
+  padding: 0;
   }
 section {
   @extend .row;
