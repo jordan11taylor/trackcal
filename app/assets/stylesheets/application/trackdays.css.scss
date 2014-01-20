@@ -3,10 +3,33 @@
 
 .month {
   padding: 10px 0 10px 20px;
+  margin-bottom: 20px;
   background-color: $light-grey;
   h3 {
     color: $grey;
     font-weight: bold;
+  }
+}
+
+.day {
+  width: 100%;
+  padding: 0 20px;
+  h3 {
+    margin: 0;
+    color: $black;
+    position: relative;
+    overflow: hidden;
+  }
+  h3:after {
+    margin-left: 20px;
+    display: inline-block;
+    content: "";
+    height: 2px;
+    background: $grey;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+
   }
 }
 
@@ -44,4 +67,25 @@
       font-weight: bold;
     }
   }
+}
+
+.finish-line {
+  margin-top: 50px;
+  height: 150px;
+  background-image:
+    -moz-linear-gradient(45deg, $black 25%, transparent 25%),
+    -moz-linear-gradient(-45deg, $black 25%, transparent 25%),
+    -moz-linear-gradient(45deg, transparent 75%, $black 75%),
+    -moz-linear-gradient(-45deg, transparent 75%, $black 75%);
+  background-image:
+    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, $black), color-stop(.25, transparent)),
+    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, $black), color-stop(.25, transparent)),
+    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, $black)),
+    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, $black));
+
+  -moz-background-size:100px 100px;
+  background-size:100px 100px;
+  -webkit-background-size:100px 101px; /* override value for shitty webkit */
+
+  background-position:0 0, 50px 0, 50px -50px, 0px 50px;
 }

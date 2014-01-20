@@ -1,5 +1,25 @@
 // import the CSS framework
 @import "foundation";
+@import "application/base";
+@import "compass/css3";
+
+p, i, li, h1, h2, h3, h4 {
+  color: $black;
+}
+
+a {
+  color: $red;
+  &:hover {
+    color: $black;
+  }
+}
+
+.button {
+  background: $red;
+  &:hover {
+    background: $black;
+  }
+}
 
 // override for the 'Home' navigation link
 .top-bar .name {
@@ -40,7 +60,8 @@
 // to make views framework-neutral
 main {
   @include twelve-columns;
-  background-color: #eee;
+  background-color: $light-grey;
+  padding: 20px;
   }
 section {
   @extend .row;

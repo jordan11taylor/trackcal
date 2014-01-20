@@ -1,3 +1,9 @@
 @import "compass/css3";
+@import "base";
 
-
+.magellan {
+  &.positioning {
+    margin-top: -84px;
+    @include opacity(0.7);
+  }
+}

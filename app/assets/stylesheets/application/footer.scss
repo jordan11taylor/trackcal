@@ -1,0 +1,14 @@
+@import "compass/css3";
+@import "base";
+
+footer {
+  background: $black;
+  .footer {
+    padding: 50px;
+    h2 {
+      margin-top: 50px;
+      color: $light-grey;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,14 +1,27 @@
 // import the CSS framework
 @import "foundation";
 @import "compass/css3";
+@import "base";
 
 // Custom overrides
 [data-magellan-expedition] {
-  margin-top: -84px;
-  background: #0d0e10;
-  @include opacity(0.8);
+  background: #000;
+  @include opacity(0.9);
   height: 84px;
-  width: 100%
+  width: 100%;
+  .sub-nav {
+    padding-top: 1.25rem;
+    margin-right: 20px;
+    float: right;
+    dd a {
+      color: $red;
+    }
+    dd.active a {
+      padding: 0;
+      background: none;
+      color: #fff;
+    }
+  }
 }
 
 // override for the 'Home' navigation link
