@@ -1,6 +1,6 @@
 class TrackdaysController < ApplicationController
   def index
-    @trackdays = Trackday.all
+    @trackdays = Trackday.all.sort_by(&:date)
   end
 
   private

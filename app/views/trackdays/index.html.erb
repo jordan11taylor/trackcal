@@ -4,18 +4,24 @@
     <h3 data-magellan-destination="<%= month %>"><%= month %></h3>
   </div>
 
-  <% trackdays.each do |trackday| %>
-  <div class="trackday">
-    <div class="track-map">
-    </div
-    ><div class="day-info">
-      <h3><%= trackday.track %></h3>
-      <p>
-        <%= trackday.organization %><br>
-        <%= trackday.session_type %> Session
-      </p>
-      <i>$<%= trackday.price %></i>
+  <% trackdays.group_by(&:day).each do |day, trackdays| %>
+    <div class="day">
+      <h3><%= day %></h3>
     </div>
-  </div>
+
+    <% trackdays.each do |trackday| %>
+    <div class="trackday">
+      <div class="track-map">
+      </div
+      ><div class="day-info">
+        <h3><%= trackday.track %></h3>
+        <p>
+          <%= trackday.organization %><br>
+          <%= trackday.session_type %> Session
+        </p>
+        <i>$<%= trackday.price %></i>
+      </div>
+    </div>
+    <% end %>
   <% end %>
 <% end %>
