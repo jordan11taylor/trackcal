@@ -39,13 +39,28 @@
   background-color: $light-grey;
   margin: 20px;
   border-bottom: 3px solid #8d8d8e;
+  &:hover {
+    h3, i {
+      text-decoration: underline;
+    }
+  }
 
   .track-map {
     display: inline-block;
     height: 138px;
     width: 140px;
-    background-color: $grey;
+    background: $grey;
   }
+
+  @mixin track-map-($name) {
+    .#{$name} {
+      background: $grey image-url("#{$name}.svg") center center no-repeat;
+    }
+  }
+
+  @include track-map-("chuckwalla");
+  @include track-map-("big-willow");
+
 
   .day-info {
     padding: 20px;
@@ -61,6 +76,7 @@
     p {
       margin-bottom: 0.5rem;
       line-height: 1.1;
+      color: $black;
     }
     i {
       color: $red;

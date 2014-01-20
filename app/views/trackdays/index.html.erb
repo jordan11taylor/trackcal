@@ -10,9 +10,9 @@
     </div>
 
     <% trackdays.each do |trackday| %>
-    <a href="<%= trackday.link %>">
+    <a href="<%= trackday.link %>" target="_blank">
       <div class="trackday">
-        <div class="track-map">
+        <div class="track-map <%= trackday.track.downcase %>">
         </div
         ><div class="day-info">
           <h3><%= trackday.track %></h3>
@@ -28,5 +28,4 @@
   <% end %>
 <% end %>
 
-<div class="finish-line">
-</div>
+<div class="finish-line"></div>
