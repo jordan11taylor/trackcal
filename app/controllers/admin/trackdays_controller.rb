@@ -55,6 +55,6 @@ class Admin::TrackdaysController < Admin::BaseController
     end
 
     def trackday_params
-      params.require(:trackday).permit(:track, :organization, :session_type, :price, :date)
+      params.require(:trackday).permit(:track, :organization, :session_type, :price, :date, :link)
     end
 end

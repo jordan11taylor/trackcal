@@ -10,18 +10,20 @@
     </div>
 
     <% trackdays.each do |trackday| %>
-    <div class="trackday">
-      <div class="track-map">
-      </div
-      ><div class="day-info">
-        <h3><%= trackday.track %></h3>
-        <p>
-          <%= trackday.organization %><br>
-          <%= trackday.session_type %> Session
-        </p>
-        <i>$<%= trackday.price %></i>
+    <a href="<%= trackday.link %>">
+      <div class="trackday">
+        <div class="track-map">
+        </div
+        ><div class="day-info">
+          <h3><%= trackday.track %></h3>
+          <p>
+            <%= trackday.organization %><br>
+            <%= trackday.session_type %> Session
+          </p>
+          <i>$<%= trackday.price %></i>
+        </div>
       </div>
-    </div>
+    </a>
     <% end %>
   <% end %>
 <% end %>

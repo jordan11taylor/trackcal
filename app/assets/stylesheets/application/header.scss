@@ -1,4 +1,5 @@
 @import "compass/css3";
+@import "base";
 
 .large-header {
   @include background-image(image-url("header-bg.png"));
@@ -8,9 +9,16 @@
 
   .logo {
     @include background-image(image-url("logo.png"));
-    background-repeat: no-repeat;
     height: 32px;
     margin-bottom: 50px;
+    display: inline-block;
+    width: 162px;
+  }
+
+  .navigation {
+    color: $light-grey;
+    float: right !important;
+    display: inline-block;
   }
 
   .headline {
