@@ -2,8 +2,8 @@
 @import "base";
 
 .month {
-  background-color: $light-grey;
   padding: 10px 0 10px 20px;
+  background-color: $light-grey;
   h3 {
     color: $grey;
     font-weight: bold;
@@ -12,13 +12,36 @@
 
 .trackday {
   display: inline-block;
+  height: 140px;
   background-color: $light-grey;
-  padding: 20px;
   margin: 20px;
   border-bottom: 3px solid #8d8d8e;
-  h3 {
-    color: $red;
-    font-weight: bold;
+
+  .track-map {
+    display: inline-block;
+    height: 138px;
+    width: 140px;
+    background-color: $grey;
+  }
+
+  .day-info {
+    padding: 20px;
+    vertical-align: top;
+    display: inline-block;
+    h3 {
+      color: $red;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+    p {
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+    i {
+      color: $red;
+      font-weight: bold;
+    }
   }
 }
-
