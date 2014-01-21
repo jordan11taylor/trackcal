@@ -21,9 +21,11 @@
   }
 
   .navigation {
-    color: $light-grey;
     float: right !important;
     display: inline-block;
+    a {
+      color: $light-grey;
+    }
   }
 
   .headline {

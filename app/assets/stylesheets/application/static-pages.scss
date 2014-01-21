@@ -1,0 +1,30 @@
+@import "compass/css3";
+@import "base";
+
+.title-bar {
+  background: #000;
+  @include opacity(0.7);
+  height: 84px;
+  width: 100%;
+  margin-top: -84px;
+  padding-left: 50px;
+  padding-top: 15px;
+  h2 {
+    font-weight: bold;
+    color: $red;
+    font-size: 30px;
+  }
+}
+
+.static-page {
+  padding: 50px;
+  max-width: 750px;
+  .back-to-calendar {
+    color: $red;
+  }
+
+  p {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+}

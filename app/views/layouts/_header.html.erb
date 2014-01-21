@@ -1,0 +1,9 @@
+<header>
+  <%= render 'layouts/navigation' %>
+
+  <div class="filter-bar" id="filter-bar">
+    <% if @trackdays %>
+      <%= render 'layouts/magellan' %>
+    <% end %>
+  </div>
+</header>
