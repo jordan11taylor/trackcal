@@ -1,0 +1,19 @@
+<%# Foundation 5 won't work when application.js is included in HEAD %>
+<%= javascript_include_tag "application" %>
+<script src="/path/to/jquery.min.js"></script>
+<script src="/path/to/waypoints.min.js"></script>
+
+<style type='text/css'>
+  @import url('http://getbarometer.s3.amazonaws.com/assets/barometer/css/barometer.css');
+  a#barometer_tab {
+    width: 38px;
+    right: 0;
+    left: auto;
+    background-color: #292829;
+    color: #f2f0f0;
+  }
+</style>
+<script src='http://getbarometer.s3.amazonaws.com/assets/barometer/javascripts/barometer.js' type='text/javascript'></script>
+<script type="text/javascript" charset="utf-8">
+  BAROMETER.load('hjWAwFKHnj5Q6mARadjgG');
+</script>
