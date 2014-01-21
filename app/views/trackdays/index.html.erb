@@ -12,7 +12,7 @@
     <% trackdays.each do |trackday| %>
     <a href="<%= trackday.link %>" target="_blank">
       <div class="trackday">
-        <div class="track-map <%= trackday.track.downcase %>">
+        <div class="track-map <%= trackday.track.downcase.gsub(/\s/,'-') %>">
         </div
         ><div class="day-info">
           <h3><%= trackday.track %></h3>

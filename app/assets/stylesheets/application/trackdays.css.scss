@@ -37,7 +37,7 @@
   display: inline-block;
   height: 140px;
   background-color: $light-grey;
-  margin: 20px;
+  margin: 20px 0 20px 20px;
   border-bottom: 3px solid #8d8d8e;
   &:hover {
     h3, i {
@@ -60,6 +60,10 @@
 
   @include track-map-("chuckwalla");
   @include track-map-("big-willow");
+  @include track-map-("streets-of-willow");
+  @include track-map-("sonoma");
+  @include track-map-("buttonwillow");
+  @include track-map-("auto-club-speedway");
 
 
   .day-info {

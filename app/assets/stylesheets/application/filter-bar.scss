@@ -2,8 +2,7 @@
 @import "base";
 
 .magellan {
-  &.positioning {
-    margin-top: -84px;
+  &.high-opacity {
     @include opacity(0.7);
   }
 }
