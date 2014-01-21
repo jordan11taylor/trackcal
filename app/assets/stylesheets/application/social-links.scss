@@ -1,0 +1,10 @@
+@import "compass/css3";
+@import "base";
+
+.social-links {
+  display: inline-block;
+  vertical-align: top;
+  .fb-like {
+    margin-right: 20px;
+  }
+}
