@@ -1,4 +1,5 @@
 class Admin::TrackdaysController < Admin::BaseController
+  before_filter :authenticate_user!
   before_action :set_trackday, only: [:show, :edit, :update, :destroy]
 
   def index
