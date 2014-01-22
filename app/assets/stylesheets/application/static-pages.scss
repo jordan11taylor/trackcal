@@ -21,6 +21,9 @@
   max-width: 750px;
   .back-to-calendar {
     color: $red;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   p {

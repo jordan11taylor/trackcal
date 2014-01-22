@@ -11,15 +11,15 @@
       </ul>
     </div>
 
-    <div class="headline"></div>
+    <div class="headline">
+      <h1>2014 Southwest U.S.<br>
+      Motorcycle Track Day<br>
+      Schedule</h1>
+    </div>
   </div>
 
   <div class="filter-bar" id="filter-bar">
     <% if @trackdays %>
-    <%= form_tag({}, method: :get) do %>
-      <%= select_tag "by_track", options_for_select(tracks, params[:by_track]) %>
-    <% end %>
-
       <%= render 'layouts/magellan' %>
     <% end %>
   </div>

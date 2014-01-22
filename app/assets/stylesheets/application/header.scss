@@ -8,11 +8,12 @@
   padding: 50px;
 
   .logo {
-    @include background-image(image-url("logo.png"));
+    @include background-image(image-url("logo.svg"));
+    background-repeat: no-repeat;
     height: 32px;
     margin-bottom: 50px;
     display: inline-block;
-    width: 162px;
+    width: 167px;
   }
 
   .social-links {
@@ -24,13 +25,21 @@
     float: right !important;
     display: inline-block;
     a {
-      color: $light-grey;
+      color: #000;
+      &:hover {
+        color: $light-grey;
+      }
     }
   }
 
-  .headline {
-    @include background-image(image-url("headline.png"));
-    background-repeat: no-repeat;
-    height: 200px;
+  .headline h1 {
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: 52px;
+    color: #fff;
+    font-weight: bold;
+    // @include background-image(image-url("headline.png"));
+    // background-repeat: no-repeat;
+    // height: 200px;
   }
 }

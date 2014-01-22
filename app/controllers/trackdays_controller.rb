@@ -3,6 +3,7 @@ class TrackdaysController < ApplicationController
   has_scope :by_organization
 
   helper_method :tracks
+  helper_method :organizations
 
   def index
     @trackdays = apply_scopes(Trackday.order("date")).all
@@ -16,5 +17,9 @@ class TrackdaysController < ApplicationController
 
     def tracks
       @tracks ||= Trackday.distinct.pluck(:track)
+    end
+
+    def organizations
+      @organizations ||= Trackday.distinct.pluck(:organization)
     end
 end

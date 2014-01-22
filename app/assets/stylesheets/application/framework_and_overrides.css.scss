@@ -5,25 +5,7 @@
 
 // Custom overrides
 [data-magellan-expedition] {
-  background: #000;
-  @include opacity(0.9);
-  position: absolute;
-  top: 392px;
-  height: 84px;
-  width: 100%;
-  .sub-nav {
-    padding-top: 1.25rem;
-    margin-right: 20px;
-    float: right;
-    dd a {
-      color: $red;
-    }
-    dd.active a {
-      padding: 0;
-      background: none;
-      color: #fff;
-    }
-  }
+  @include transparent(#000, 0.9);
 }
 
 // override for the 'Home' navigation link
