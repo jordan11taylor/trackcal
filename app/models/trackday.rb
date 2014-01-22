@@ -1,4 +1,8 @@
 class Trackday < ActiveRecord::Base
+  scope :by_track, -> track { where(:track => track) }
+
+  scope :by_organization, -> organization { where(:organization => track) }
+
   def month
     date.strftime("%B")
   end

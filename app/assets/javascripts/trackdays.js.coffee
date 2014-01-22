@@ -6,3 +6,6 @@ $ ->
   $("#filter-bar").waypoint (direction) ->
     if direction is "up"
       $(".magellan").addClass("high-opacity")
+
+  $("select").change ->
+    $(@).closest("form").submit()

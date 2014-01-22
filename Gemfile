@@ -12,6 +12,9 @@ gem 'sass-rails', '~> 4.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+# Use Has_scope for filters on app index
+gem 'has_scope'
+
 # Use High_Voltage for static pages
 gem 'high_voltage', '~> 2.1.0'
 
