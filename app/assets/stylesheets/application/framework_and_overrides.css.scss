@@ -6,6 +6,7 @@
 // Custom overrides
 [data-magellan-expedition] {
   @include transparent(#000, 0.9);
+  padding: 10px 20px;
 }
 
 // override for the 'Home' navigation link

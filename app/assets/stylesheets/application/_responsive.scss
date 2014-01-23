@@ -1,0 +1,27 @@
+@mixin media($media) {
+  @if $media == full {
+    @media only screen and (min-width: 980px) { @content; }
+  }
+  @else if $media == large {
+    @media only screen and (max-width: 980px) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (max-width: 767px) { @content; }
+  }
+  @else if $media == small {
+    // TODO: Figure out a good breakpoint for "small"
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == hi_res {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5) { @content; }
+  }
+}
+
+@mixin hi_res($standard, $hi, $width, $height) {
+  background-image: image-url($standard);
+  @include media(hi_res) {
+    background-image: image-url($hi);
+    background-size: $width $height;
+    -webkit-background-size: $width $height;
+  }
+}

@@ -1,5 +1,6 @@
 @import "compass/css3";
 @import "base";
+@import "_responsive";
 
 .month {
   padding: 10px 0 10px 20px;
@@ -50,6 +51,9 @@
     height: 138px;
     width: 140px;
     background: $grey;
+    @include media(small) {
+      display: none;
+    }
   }
 
   @mixin track-map-($name) {
