@@ -1,5 +1,6 @@
 @import "compass/css3";
 @import "base";
+@import "_responsive";
 
 
 .magellan {
@@ -11,26 +12,45 @@
   &.high-opacity {
     @include transparent(#000, 0.7);
   }
+  @include media(medium) {
+    top: auto;
+    position: static;
+    height: auto;
+    padding-left: 10px;
+  }
   form {
-    min-width: 220px;
-    margin-right: 20px;
     padding-top: 10px;
     display: inline-block;
+    @include media(small) {
+      padding-top: 0px;
+    }
     select {
       background: $red image-url("arrow.svg") no-repeat center right;
       background-position-x: 93%;
       @include box-shadow(0px 1px 3px 0px rgb( 1, 1, 1 ));
       color: #fff;
+      min-width: 220px;
+      width: auto;
+      margin-right: 20px;
       border: none;
       padding: 12px 10px 15px;
       font-size: 18px;
       line-height: 1;
       font-family: "ff-meta-web-pro",sans-serif;
+      @include media(small) {
+        min-width: 100%;
+      }
     }
   }
   .sub-nav {
     padding-top: 1.25rem;
     float: right;
+    @include media(medium) {
+      float: none;
+    }
+    @include media(small) {
+      padding-top: 5px;
+    }
     dd a {
       color: $red;
       &:hover {

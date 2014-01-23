@@ -2,11 +2,15 @@
 @import "foundation";
 @import "compass/css3";
 @import "base";
+@import "_responsive";
 
 // Custom overrides
 [data-magellan-expedition] {
   @include transparent(#000, 0.9);
   padding: 10px 20px;
+  @include media(small) {
+    padding: 10px 10px;
+  }
 }
 
 // override for the 'Home' navigation link

@@ -1,9 +1,7 @@
 <div data-magellan-expedition="fixed" id="magellan" class="magellan positioning">
   <%= form_tag({}, method: :get) do %>
     <%= select_tag "by_track", options_for_select(tracks, params[:by_track]), prompt: "All Tracks"  %>
-  <% end %>
 
-  <%= form_tag({}, method: :get) do %>
     <%= select_tag "by_organization", options_for_select(organizations, params[:by_organization]), prompt: "All Organizations"  %>
   <% end %>
 

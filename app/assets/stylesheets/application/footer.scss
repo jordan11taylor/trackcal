@@ -1,10 +1,18 @@
 @import "compass/css3";
 @import "base";
+@import "_responsive";
+
 
 footer {
   background: $black;
   .footer {
     padding: 50px;
+    @include media(medium) {
+      padding: 35px;
+    }
+    @include media(medium) {
+      padding: 20px;
+    }
     h2 {
       text-align: center;
       margin: 50px 0;

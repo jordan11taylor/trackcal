@@ -1,11 +1,20 @@
 @import "compass/css3";
 @import "base";
+@import "_responsive";
 
 .large-header {
   @include background-image(image-url("header-bg.png"));
   background-size: cover;
   height: 475px;
   padding: 50px;
+  @include media(medium) {
+    padding: 35px;
+    height: 330px;
+  }
+  @include media(small) {
+    padding: 20px;
+    height: 290px;
+  }
 
   .logo {
     @include background-image(image-url("logo.svg"));
@@ -14,32 +23,49 @@
     margin-bottom: 50px;
     display: inline-block;
     width: 167px;
+    @include media(medium) {
+      margin-bottom: 30px;
+    }
   }
 
   .social-links {
     padding-top: 5px;
     padding-left: 50px;
+    @include media(medium) {
+      padding-left: 30px;
+    }
+    @include media(small) {
+      padding: 0 0 30px 0;
+      display: block;
+    }
   }
 
   .navigation {
-    float: right !important;
+    float: right;
     display: inline-block;
+    @media (max-width: 650px) {
+      display: none;
+    }
     a {
-      color: #000;
+      color: #fff;
       &:hover {
-        color: $light-grey;
+        color: $red;
       }
     }
   }
 
   .headline h1 {
+    max-width: 540px;
     text-transform: uppercase;
     line-height: 1.2;
     font-size: 52px;
     color: #fff;
     font-weight: bold;
-    // @include background-image(image-url("headline.png"));
-    // background-repeat: no-repeat;
-    // height: 200px;
+    @include media(medium) {
+      font-size: 42px;
+    }
+    @include media(small) {
+      font-size: 32px;
+    }
   }
 }
