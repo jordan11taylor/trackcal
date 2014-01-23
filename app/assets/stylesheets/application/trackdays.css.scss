@@ -6,6 +6,9 @@
   padding: 10px 0 10px 20px;
   margin-bottom: 20px;
   background-color: $light-grey;
+  @include media(small) {
+    margin-bottom: 10px;
+  }
   h3 {
     color: $grey;
     font-weight: bold;
@@ -16,6 +19,10 @@
   width: 100%;
   padding: 0 20px;
   margin-bottom: 20px;
+  @include media(small) {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
   h3 {
     margin: 0;
     color: $black;
@@ -41,6 +48,9 @@
   background-color: $light-grey;
   margin: 0 0 20px 20px;
   border-bottom: 3px solid #8d8d8e;
+  @include media(small) {
+    margin-bottom: 10px;
+  }
   &:hover {
     h3, i {
       text-decoration: underline;
