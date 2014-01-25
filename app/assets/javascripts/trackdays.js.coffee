@@ -7,5 +7,5 @@ $ ->
     if direction is "up"
       $(".magellan").addClass("high-opacity")
 
-  $("select").change ->
+  $("#magellan select").change ->
     $(@).closest("form").submit()
