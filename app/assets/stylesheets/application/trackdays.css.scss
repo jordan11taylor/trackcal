@@ -70,6 +70,7 @@
   @mixin track-map-($name) {
     .#{$name} {
       background: $grey image-url("#{$name}.svg") center center no-repeat;
+      background-size: 110px;
     }
   }
 
