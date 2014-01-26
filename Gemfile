@@ -38,6 +38,8 @@ group :development do
   gem 'rails_layout'
 end
 
+gem "sitemap_generator", "~>4.3.1"
+
 gem "compass-rails", "~> 1.1.2"
 
 # Use jquery as the JavaScript library
