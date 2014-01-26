@@ -2,6 +2,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= content_for?(:title) ? yield(:title) : "Trackcal" %></title>
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Trackcal" %>">
+  <meta property="og:title" content="Track Cal" />
+  <meta property="og:type" content="trackdays.motorcycles" />
+  <meta property="og:url" content="http://www.trackcal.com" />
+  <meta property="og:image" content="http://www.trackcal.com/assets/header-bg-bfdcfd27f72b444cd0a52ff0397a46bc.png" />
   <%= stylesheet_link_tag "application" %>
   <script type="text/javascript" src="//use.typekit.net/jvh8foo.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
