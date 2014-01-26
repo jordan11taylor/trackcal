@@ -15,7 +15,7 @@
       @include transparent(#000, 1);
     }
   }
-  @include media(medium) {
+  @media (max-width: 940px) {
     top: auto;
     position: static;
     height: auto;
@@ -40,6 +40,9 @@
       font-size: 18px;
       line-height: 1;
       font-family: "ff-meta-web-pro",sans-serif;
+      @media (max-width: 1039px) {
+        min-width: 160px;
+      }
       @include media(small) {
         min-width: 140px;
         margin-bottom: 10px;
@@ -54,8 +57,8 @@
   .sub-nav {
     padding-top: 1.25rem;
     float: right;
-    @include media(medium) {
-      float: none;
+    @media (max-width: 940px) {
+      float: none!important;
     }
     @include media(small) {
       padding-top: 5px;
