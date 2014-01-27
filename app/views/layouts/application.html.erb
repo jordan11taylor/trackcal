@@ -3,6 +3,8 @@
   <%= render 'layouts/app_head' %>
 
   <body>
+    <%= render "layouts/ga" if Rails.env.production? %>
+    
     <%= render 'layouts/social_sharing' %>
 
     <%= render 'layouts/header' %>
