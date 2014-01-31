@@ -10,6 +10,7 @@
     </div>
 
     <% trackdays.each do |trackday| %>
+    <%= link_to "Show", trackday_path(trackday) %>
     <a href="<%= trackday.link %>" target="_blank">
       <div class="trackday">
         <div class="track-map <%= trackday.track.downcase.gsub(/\s/,'-') %>">

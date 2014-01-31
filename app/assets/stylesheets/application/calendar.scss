@@ -1,0 +1,43 @@
+@import "compass/css3";
+@import "base";
+@import "_responsive";
+
+.month {
+  padding: 10px 0 10px 20px;
+  margin-bottom: 20px;
+  background-color: $light-grey;
+  @include media(small) {
+    margin-bottom: 10px;
+  }
+  h3 {
+    color: $grey;
+    font-weight: bold;
+  }
+}
+
+.day {
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  @include media(small) {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    margin: 0;
+    color: $black;
+    position: relative;
+    overflow: hidden;
+  }
+  h3:after {
+    margin-left: 20px;
+    display: inline-block;
+    content: "";
+    height: 2px;
+    background: $grey;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+
+  }
+}

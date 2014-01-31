@@ -9,6 +9,10 @@ class TrackdaysController < ApplicationController
     @trackdays = apply_scopes(Trackday.order("date")).all
   end
 
+  def show
+    @trackday = Trackday.find(params[:id])
+  end
+
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def trackday_params

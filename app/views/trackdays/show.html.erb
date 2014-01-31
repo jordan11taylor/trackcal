@@ -1,0 +1,13 @@
+<div class="trackday single">
+  <div class="large <%= @trackday.track.downcase.gsub(/\s/,'-') %>">
+  </div>
+
+  <div class="day-info-detail">
+    <h1><%= @trackday.track %></h1>
+    <h3>
+      <%= @trackday.organization %><br>
+      <%= @trackday.session_type %> Session
+    </h3>
+    <i>$<%= @trackday.price %></i>
+  </div>
+</div>

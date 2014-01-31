@@ -2,45 +2,7 @@
 @import "base";
 @import "_responsive";
 
-.month {
-  padding: 10px 0 10px 20px;
-  margin-bottom: 20px;
-  background-color: $light-grey;
-  @include media(small) {
-    margin-bottom: 10px;
-  }
-  h3 {
-    color: $grey;
-    font-weight: bold;
-  }
-}
-
-.day {
-  width: 100%;
-  padding: 0 20px;
-  margin-bottom: 20px;
-  @include media(small) {
-    padding: 0 10px;
-    margin-bottom: 10px;
-  }
-  h3 {
-    margin: 0;
-    color: $black;
-    position: relative;
-    overflow: hidden;
-  }
-  h3:after {
-    margin-left: 20px;
-    display: inline-block;
-    content: "";
-    height: 2px;
-    background: $grey;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-
-  }
-}
+// Trackdays Index
 
 .trackday {
   display: inline-block;
@@ -48,6 +10,15 @@
   background-color: $light-grey;
   margin: 0 0 20px 20px;
   border-bottom: 3px solid #8d8d8e;
+  &.single {
+    height: 400px;
+    margin: 50px;
+    &:hover {
+      h3, i {
+        text-decoration: none;
+      }
+    }
+  }
   @include media(small) {
     margin-bottom: 10px;
   }
@@ -71,9 +42,14 @@
     .#{$name} {
       background: $grey image-url("#{$name}.svg") center center no-repeat;
       background-size: 110px;
+      &.large {
+        width: 400px;
+        height: 400px;
+        display: inline-block;
+        background-size: 360px;
+      }
     }
   }
-
   @include track-map-("chuckwalla");
   @include track-map-("spring-mountain");
   @include track-map-("big-willow");
@@ -105,6 +81,26 @@
     }
   }
 }
+
+// Show page trackday styles
+
+.day-info-detail {
+  padding: 70px;
+  vertical-align: top;
+  display: inline-block;
+  h1 {
+    color: $red;
+    font-weight: bold;
+    font-size: 52px;
+  }
+  i {
+    color: $red;
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
+
+// Checkered flag on index
 
 .finish-line {
   margin-top: 50px;
