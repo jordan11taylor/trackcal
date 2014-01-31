@@ -3,22 +3,12 @@
 @import "_responsive";
 
 // Trackdays Index
-
 .trackday {
   display: inline-block;
   height: 140px;
   background-color: $light-grey;
   margin: 0 0 20px 20px;
   border-bottom: 3px solid #8d8d8e;
-  &.single {
-    height: 400px;
-    margin: 50px;
-    &:hover {
-      h3, i {
-        text-decoration: none;
-      }
-    }
-  }
   @include media(small) {
     margin-bottom: 10px;
   }
@@ -58,7 +48,6 @@
   @include track-map-("buttonwillow");
   @include track-map-("auto-club");
 
-
   .day-info {
     padding: 20px;
     vertical-align: top;
@@ -83,9 +72,8 @@
 }
 
 // Show page trackday styles
-
-.day-info-detail {
-  padding: 70px;
+.trackday-detail {
+  padding: 50px;
   vertical-align: top;
   display: inline-block;
   h1 {
@@ -101,7 +89,6 @@
 }
 
 // Checkered flag on index
-
 .finish-line {
   margin-top: 50px;
   height: 150px;
