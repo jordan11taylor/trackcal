@@ -1,0 +1,34 @@
+@import "compass/css3";
+@import "base";
+@import "_responsive";
+
+@mixin track-map-($name) {
+  .#{$name} {
+    background: $grey image-url("#{$name}.svg") center center no-repeat;
+    background-size: 110px;
+    &.large {
+      width: 100%;
+      height: 500px;
+      float: left;
+      display: inline-block;
+      background-size: 80%;
+      @include media(large) {
+        height: 400px;
+      }
+      @include media(medium) {
+        height: 300px;
+      }
+      @include media(small) {
+        height: 180px;
+        background-size: 50%;
+      }
+    }
+  }
+}
+@include track-map-("chuckwalla");
+@include track-map-("spring-mountain");
+@include track-map-("big-willow");
+@include track-map-("streets-of-willow");
+@include track-map-("sonoma");
+@include track-map-("buttonwillow");
+@include track-map-("auto-club");

@@ -22,31 +22,10 @@
     display: inline-block;
     height: 138px;
     width: 140px;
-    background: $grey;
     @include media(small) {
       display: none;
     }
   }
-
-  @mixin track-map-($name) {
-    .#{$name} {
-      background: $grey image-url("#{$name}.svg") center center no-repeat;
-      background-size: 110px;
-      &.large {
-        width: 400px;
-        height: 400px;
-        display: inline-block;
-        background-size: 360px;
-      }
-    }
-  }
-  @include track-map-("chuckwalla");
-  @include track-map-("spring-mountain");
-  @include track-map-("big-willow");
-  @include track-map-("streets-of-willow");
-  @include track-map-("sonoma");
-  @include track-map-("buttonwillow");
-  @include track-map-("auto-club");
 
   .day-info {
     padding: 20px;
@@ -73,18 +52,43 @@
 
 // Show page trackday styles
 .trackday-detail {
-  padding: 50px;
+  background: $light-grey;
+  width: 100%;
+  padding: 0;
   vertical-align: top;
   display: inline-block;
-  h1 {
-    color: $red;
-    font-weight: bold;
-    font-size: 52px;
+  .map-container {
+    width: 40%;
+    @include media(small) {
+      width: 100%;
+    }
   }
-  i {
-    color: $red;
-    font-size: 36px;
-    font-weight: bold;
+  .day-details {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 50px;
+    @include media(small) {
+      padding: 20px;
+    }
+    h1 {
+      color: $red;
+      font-weight: bold;
+      font-size: 52px;
+    }
+    i {
+      color: $red;
+      font-size: 36px;
+      font-weight: bold;
+    }
+  }
+}
+
+.disqus {
+  max-width: 800px;
+  padding: 50px;
+  @include media(medium) {
+    padding: 20px;
   }
 }
 

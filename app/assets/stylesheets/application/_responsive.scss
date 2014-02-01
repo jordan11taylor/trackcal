@@ -9,7 +9,6 @@
     @media only screen and (max-width: 767px) { @content; }
   }
   @else if $media == small {
-    // TODO: Figure out a good breakpoint for "small"
     @media only screen and (max-width: 479px) { @content; }
   }
   @else if $media == hi_res {
