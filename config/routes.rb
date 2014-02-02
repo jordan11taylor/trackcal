@@ -9,4 +9,6 @@ Trackcal::Application.routes.draw do
 
     resources :trackdays
   end
+
+  match '/:id' => 'high_voltage/pages#show', :as => :static, :via => :get
 end

@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require social-share-button
 //= require waypoints
 // Note: Foundation 5 won't work with turbolinks
 //= require foundation

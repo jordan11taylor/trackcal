@@ -15,6 +15,8 @@ end
 
 gem "devise", "~> 3.2.2"
 
+gem 'social-share-button'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
