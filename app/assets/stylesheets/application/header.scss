@@ -25,6 +25,8 @@
     width: 167px;
     @include media(medium) {
       margin-bottom: 25px;
+      width: 140px;
+      background-width: 140px;
     }
   }
 
