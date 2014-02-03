@@ -36,6 +36,11 @@
     @media (max-width: 520px) {
       float: right;
     }
+    @media (max-width: 620px) {
+      .twitter-share-button {
+        display: none;
+      }
+    }
   }
 
   .navigation {
