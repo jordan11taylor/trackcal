@@ -7,8 +7,14 @@
   vertical-align: top;
   .fb-like {
     margin-right: 20px;
+    
     @include media(small) {
       margin-right: 0px;
+    }
+  }
+  @media (max-width: 620px) {
+    .twitter-share-button {
+      display: none;
     }
   }
 }
