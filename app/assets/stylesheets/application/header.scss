@@ -34,16 +34,16 @@
     padding-top: 5px;
     padding-left: 50px;
     @media (max-width: 650px) {
-      display: none;
+      // display: none;
     }
   }
 
   .navigation {
     float: right;
     display: inline-block;
-    @include media(small) {
+    @media (max-width: 650px) {
       // display: block;
-      // float: none;
+      float: none;
       li {
         margin-left: 0.9rem;
         a {
