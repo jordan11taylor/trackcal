@@ -3,16 +3,28 @@
     <span class="large <%= @trackday.track.downcase.gsub(/\s/,'-') %>"></span>
   </div>
 
-  <div class="day-details">
+  <div class="share-buttons">
+    <p>Share:</p>
     <%= social_share_button_tag(@trackday.date) %>
+  </div>
+
+  <div class="day-details">
+    <h3 class="trackday-date"><%= @trackday.date.strftime("%b %-d") %></h3>
+
     <a href="<%= @trackday.link %>" target="_blank">
       <h1><%= @trackday.track %></h1>
     </a>
+    
     <h3>
       <%= @trackday.organization %><br>
       <%= @trackday.session_type %> Session
     </h3>
-    <i>$<%= @trackday.price %></i>
+
+    <a href="<%= @trackday.link %>" target="_blank">  
+      <div class="price button">
+        <i>$<%= @trackday.price %></i><h3>Sign Up</h3>
+      </div>
+    </a>
   </div>
 </div>
 

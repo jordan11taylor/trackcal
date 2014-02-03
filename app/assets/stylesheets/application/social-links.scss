@@ -1,10 +1,50 @@
 @import "compass/css3";
 @import "base";
+@import "_responsive";
 
 .social-links {
   display: inline-block;
   vertical-align: top;
   .fb-like {
     margin-right: 20px;
+  }
+}
+
+.share-buttons {
+  background: #fff;
+  padding: 20px 20px 20px 50px;
+  display: inline-block;
+  width: 60%;
+  @include media(small) {
+    width: 100%;
+    padding: 20px;
+  }
+  p {
+    display: inline-block;
+    font-weight: bold;
+    color: $red;
+    margin: 0;
+    vertical-align: top
+  }
+  .social-share-button {
+    display: inline-block;
+    .social-share-button-twitter {
+      margin-left: 15px;
+      width: 24px;
+      height: 24px;
+      background: image-url("twitter.svg") no-repeat center center;
+    }
+    .social-share-button-facebook {
+      margin-left: 15px;
+      width: 24px;
+      height: 24px;
+      background: image-url("facebook.svg") no-repeat center center;
+    }
+    .social-share-button-email {
+      margin-left: 15px;
+      width: 24px;
+      height: 24px;
+      background: image-url("email.svg") no-repeat center center;
+    }
   }
 }

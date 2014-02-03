@@ -13,8 +13,10 @@ group :production do
   gem 'pg'
 end
 
+# Use Devise for admin login (for now)
 gem "devise", "~> 3.2.2"
 
+# Use Social-share for trackday sharing
 gem 'social-share-button'
 
 # Use SCSS for stylesheets
