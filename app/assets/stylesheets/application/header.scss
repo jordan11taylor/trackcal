@@ -40,8 +40,8 @@
     float: right;
     display: inline-block;
     @include media(small) {
-      display: block;
-      float: none;
+      // display: block;
+      // float: none;
     }
     a {
       color: #fff;
