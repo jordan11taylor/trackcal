@@ -18,7 +18,7 @@
         height: 450px;
       }
       @include media(small) {
-        height: 200px;
+        height: 180px;
         background-size: 50%;
       }
     }
@@ -31,3 +31,10 @@
 @include track-map-("sonoma");
 @include track-map-("buttonwillow");
 @include track-map-("auto-club");
+
+.buttonwillow.large {
+  background-size: 70%;
+  @include media(small) {
+    background-size: 40%;
+  }
+}
