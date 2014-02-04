@@ -10,7 +10,7 @@
   margin: 0 0 20px 20px;
   border-bottom: 3px solid #8d8d8e;
   @include media(small) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   &:hover {
     h3, i {
@@ -77,9 +77,13 @@
     }
     .trackday-date {
       margin: 0;
+      font-style: italic;
       color: $black;
       font-size: 36px;
       font-weight: bold;
+      @include media(medium) {
+        font-size: 30px;
+      }
     }
     h1 {
       display: inline-block;
@@ -89,6 +93,9 @@
       font-size: 52px;
       &:hover {
         text-decoration: underline;
+      }
+      @include media(medium) {
+        font-size: 42px;
       }
     }
     .price.button {
@@ -113,6 +120,10 @@
         color: #fff;
         background: $black;
         display: inline-block;
+        @include media(medium) {
+          font-size: 24px;
+          line-height: 1.8;
+        }
       }
       h3 {
         height: 100%;
@@ -123,6 +134,9 @@
         display: inline-block;
         font-size: 30px;
         font-weight: bold;
+        @include media(medium) {
+          font-size: 24px;
+        }
       }
     }
   }
