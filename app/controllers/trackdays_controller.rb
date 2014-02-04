@@ -6,7 +6,7 @@ class TrackdaysController < ApplicationController
   helper_method :organizations
 
   def index
-    @trackdays = apply_scopes(Trackday.order("date")).all
+    @trackdays = apply_scopes(Trackday.where('date >= ?', Date.today).order("date")).all
   end
 
   def show
