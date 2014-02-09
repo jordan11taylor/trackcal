@@ -9,10 +9,26 @@
   height: 85px;
   width: 100%;
   padding-left: 20px;
+  text-align: justify; 
+  /* IE special */  
+  width: 100%;  
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
   &.high-opacity {
     @include transparent(#000, 0.7);
     @media (max-width: 940px) {
       @include transparent(#000, 1);
+    }
+  }
+  &:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    font-size:0;
+    line-height:0;
+    @include media(small) {
+      display: none;  
     }
   }
   @media (max-width: 940px) {
@@ -55,8 +71,10 @@
     }
   }
   .sub-nav {
-    padding-top: 1.25rem;
-    float: right;
+    padding-bottom: 1.6rem;
+    text-align: right;
+    vertical-align: bottom;
+    display: inline-block;
     @media (max-width: 940px) {
       float: none!important;
       padding: 10px 0;

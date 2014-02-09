@@ -1,6 +1,6 @@
 <header>
-  <div class="large-header">
-    <a href="/" class="logo"></a>
+  <div class="large-header <%= !@trackdays %>">
+    <a href="/" class="logo" alt="trackcal"></a>
 
     <%= render "layouts/sharing_links" %>
 
@@ -11,9 +11,11 @@
       </ul>
     </div>
 
-    <div class="headline">
-      <h1>2014 Southwest U.S. Motorcycle Track Day Calendar</h1>
-    </div>
+    <% if @trackdays %>
+      <div class="headline">
+        <h1>2014 Southwest U.S. Motorcycle Track Day Calendar</h1>
+      </div>
+    <% end %>  
   </div>
 
   <div class="filter-bar" id="filter-bar">

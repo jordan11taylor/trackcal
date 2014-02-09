@@ -4,10 +4,8 @@
 
 .title-bar {
   background: #000;
-  @include transparent(#000, 0.7);
   height: 84px;
   width: 100%;
-  margin-top: -84px;
   padding-left: 50px;
   padding-top: 15px;
   @include media(medium) {

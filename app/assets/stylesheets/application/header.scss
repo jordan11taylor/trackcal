@@ -5,15 +5,18 @@
 .large-header {
   @include background-image(image-url("header-bg.png"));
   background-size: cover;
-  height: 475px;
+  max-height: 475px;
   padding: 50px;
+  &.false {
+    height: 475px;
+  }
   @include media(medium) {
     padding: 35px;
-    height: 330px;
+    max-height: 330px;
   }
   @include media(small) {
     padding: 20px;
-    height: 290px;
+    max-height: 290px;
   }
 
   .logo {
