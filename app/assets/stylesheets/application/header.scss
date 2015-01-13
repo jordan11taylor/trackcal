@@ -3,7 +3,7 @@
 @import "_responsive";
 
 .large-header {
-  @include background-image(image-url("header-bg.png"));
+  @include background-image(image-url("header-bg-1.png"));
   background-size: cover;
   max-height: 475px;
   padding: 50px;
